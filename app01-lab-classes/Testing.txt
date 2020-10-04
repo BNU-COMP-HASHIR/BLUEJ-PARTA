@@ -1,4 +1,0 @@
-Student hashir = new Student("Hashir", "21717190");
-hashir.addCredits(120);
-hashir.print();
-Hashir, student ID: 21717190, credits: 120
