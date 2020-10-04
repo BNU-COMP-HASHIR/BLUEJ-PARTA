@@ -6,11 +6,10 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
- * modified by Derek Peacock
- * dated 27/Sep/2020
+ * modified by Hashir Iqbal
+ * dated 4/Oct/2020
  */
-public class LabClass
-{
+public class LabClass{ 
     private String instructor;
     private String room;
     private String timeAndDay;
@@ -21,6 +20,7 @@ public class LabClass
     /**
      * Create a LabClass with a maximum number of enrolments. All other details
      * are set to default values.
+     * A new lab class is created as per the requirements e.g Name and Number of students  
      */
     public LabClass(int maxNumberOfStudents)
     {
@@ -34,6 +34,7 @@ public class LabClass
 
     /**
      * Add a student to this LabClass.
+     * 3 new students were added.
      */
     public void enrollStudent(Student newStudent)
     {
