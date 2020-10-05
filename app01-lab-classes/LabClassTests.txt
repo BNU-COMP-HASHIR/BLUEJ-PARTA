@@ -1,14 +1,21 @@
-LabClass co452Lab = new LabClass(3);
+LabClass co452LabClass = new LabClass(3);
 Student student1 = new Student("Bob Green", "1");
 Student student2 = new Student("Carrol Spence", "2");
 Student student3 = new Student("Mike Dean", "3");
-co452Lab.enrollStudent(student1);
-co452Lab.enrollStudent(student2);
-co452Lab.enrollStudent(student3);
-co452Lab.setTime("Tuesday 29th September 2020");
-co452Lab.setRoom("G100");
-co452Lab.setInstructor("Nicholas Day");
+co452LabClass.enrollStudent(student1);
+co452LabClass.enrollStudent(student2);
+co452LabClass.enrollStudent(student3);
+co452LabClass.setTime("Tuesday 29th September 2020" );
+co452LabClass.setRoom("G100");
+co452LabClass.setInstructor("Nicholas Day");
 student1.addCredits(20);
 student2.addCredits(20);
 student3.addCredits(20);
-student2.changeName("Carrol Spencer");
+student2.changeName("Carrol Spencer" );
+Course course1 = new Course("Computing", "G400");
+course1.getCodeNumber()
+    returned String "G400"
+course1.setTitle("Dance");
+course1.setTitle("Computing");
+Student student1 = new Student("Bob Green", "1", "Computing");
+Course course1 = new Course("Computing", "G400");
