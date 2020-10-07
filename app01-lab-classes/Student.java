@@ -8,27 +8,29 @@ import java.util.*;
  * @version 2016.02.29
  * Modified By Hashir Iqbal
  */
+import java.util.ArrayList;
+import java.util.List;
 public class Student
-{
+ {
     // the student's full name
     private String name;
     // the student ID
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    // the students course
-    private String course; 
+    // List of courses
+    private List<Course> courseList;
+
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID, String courseTitle)
+    public Student(String fullName, String studentID)
     {
         name = fullName;
         id = studentID;
         credits = 0;
-        course = courseTitle;
+        courseList = new ArrayList<Course>();
     }
-
     /**
      * Return the full name of this student.
      */
@@ -36,7 +38,6 @@ public class Student
     {
         return name;
     }
-
     /**
      * Set a new name for this student.
      */
@@ -44,7 +45,6 @@ public class Student
     {
         name = replacementName;
     }
-
     /**
      * Return the student ID of this student.
      */
@@ -52,7 +52,6 @@ public class Student
     {
         return id;
     }
-
     /**
      * Add some credit points to the student's accumulated credits.
      */
@@ -60,16 +59,7 @@ public class Student
     {
         credits += additionalPoints;
     }
-    /**
-     * Adding student's course 
-     */
-    public void addCourse(String courseTitle, String courseNumber)
-    {
-        course = courseTitle;
-    }
-        
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -77,7 +67,6 @@ public class Student
     {
         return credits;
     }
-
     /**
      * Return the login name of this student. The login name is a combination
      * of the first four characters of the student's name and the first three
@@ -87,12 +76,14 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+    public void addCourse(Course course){
+        courseList.add(course);
+    }
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits + "\nCourses:" + courseList.toString());
     }
 }

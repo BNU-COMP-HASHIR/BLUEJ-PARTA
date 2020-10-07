@@ -19,3 +19,43 @@ course1.setTitle("Dance");
 course1.setTitle("Computing");
 Student student1 = new Student("Bob Green", "1", "Computing");
 Course course1 = new Course("Computing", "G400");
+Student student1 = new Student("Bob Green", "1");
+LabClass co452Lab = new LabClass(3);
+Student student1 = new Student("Bob Greeb", "1");
+Student student2 = new Student("Carrol Spence", "2");
+Student student3 = new Student("Mike Dean", "3");
+co452Lab.enrollStudent(student1);
+co452Lab.enrollStudent(student2);
+co452Lab.enrollStudent(student3);
+co452Lab.setTime("Tuesday 29th September 2020");
+co452Lab.setRoom("G100");
+co452Lab.setInstructor("Nicholas Day");
+student1.addCredits(20);
+student2.addCredits(20);
+student3.addCredits(20);
+student2.changeName("Carrol Spencer");
+Course course1 = new Course("Computing" , "G400" );
+student1.addCourse(course1);
+Course course2 = new Course("Biology", "G500");
+student2.addCourse(course2);
+student3.addCourse(course1);
+student1.print();
+Bob Greeb, student ID: 1, credits: 20
+Courses:[Course{title='Computing, codeNumber='G400}]
+student2.print();
+Carrol Spencer, student ID: 2, credits: 20
+Courses:[Course{title='Biology, codeNumber='G500}]
+student3.print();
+Mike Dean, student ID: 3, credits: 20
+Courses:[Course{title='Computing, codeNumber='G400}]
+co452Lab.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Bob Greeb, student ID: 1, credits: 20
+Courses:[Course{title='Computing, codeNumber='G400}]
+Carrol Spencer, student ID: 2, credits: 20
+Courses:[Course{title='Biology, codeNumber='G500}]
+Mike Dean, student ID: 3, credits: 20
+Courses:[Course{title='Computing, codeNumber='G400}]
+Number of students: 3

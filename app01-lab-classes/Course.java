@@ -6,50 +6,36 @@
  * @version (4th Oct 2020)
  */
 public class Course
-{
-    // Course title 
+ {
     private String title;
-    // Course's code number 
-    private String codeNumber; 
-
-    /**
-     * Constructor for objects of class Course
-     */
+    private String codeNumber;
     public Course(String title, String codeNumber)
     {
-        // initial values of the variables  
-        this.title = title; 
-        this.codeNumber = codeNumber; 
+        this.title = title;
+        this.codeNumber = codeNumber;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-
-     */
-    public String getTitle()
+    public String getTitle() 
     {
-        // returns the title
-        return  title; 
+        return title;
     }
-    
     public void setTitle(String title) 
-    { 
-        //sets the title value 
-        this.title = title; 
-    }
-    
-    public String getCodeNumber()
-    { 
-        // returns the value stored in codenumber 
-        return codeNumber; 
-    }
-    
-    public void setCodenumber(String codeNumber)
     {
-        //used to set the code of the course
-        
-        this.codeNumber = codeNumber; 
+        this.title = title;
+    }
+    public String getCodeNumber() 
+    {
+        return codeNumber;
+    }
+    public void setCodeNumber(String codeNumber) 
+    {
+        this.codeNumber = codeNumber;
+    }
+    @Override
+    public String toString() 
+    {
+        return "Course{" +
+                "title='" + title +
+                ", codeNumber='" + codeNumber +
+                '}';
     }
 }
-        
-
