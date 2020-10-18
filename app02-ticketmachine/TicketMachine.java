@@ -29,16 +29,16 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost; 
         balance = 0;
         total = 0;
+       
     }
     /**
      * Function to create tickets in the ticket machine.
      */
-    private void createTickets()
+    public void createTickets()
     {
         ticketToAylesbury = new Ticket("Aylesbury", 220);
         ticketToHighWycombe = new Ticket("High Wycombe", 330);
