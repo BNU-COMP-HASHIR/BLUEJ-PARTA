@@ -63,7 +63,10 @@ public class Ticket
      */
     public void print() 
     {
-        System.out.println(
+        System.out.println("Final destination: " + destination);
+        System.out.println("Ticket Price: " + cost);
+        System.out.println("Date Purchased: " + datePurchased);
+        
     }
    
 }
