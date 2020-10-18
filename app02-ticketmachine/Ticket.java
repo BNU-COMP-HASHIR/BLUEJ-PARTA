@@ -57,5 +57,14 @@ public class Ticket
     {
         return destination; 
     }
+    
+    /**
+     * Print method to print the tickets
+     */
+    public void print() 
+    {
+        System.out.println(
+    }
+   
 }
 
