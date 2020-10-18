@@ -45,7 +45,7 @@ public class Ticket
      * Cost accessor method to show us the cost 
      */
     
-        public int getCost(int cost)
+        public int getCost()
     {
         return cost;
     }
@@ -53,7 +53,7 @@ public class Ticket
     /** 
      * Destination accessor method to show us the destination
      */
-    public String getDestination(String destination) 
+    public String getDestination() 
     {
         return destination; 
     }
