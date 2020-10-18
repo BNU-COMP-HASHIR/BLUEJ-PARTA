@@ -1,4 +1,4 @@
-
+import java.util.Date;
 /**
  * This Class is made to hold multiple destinations' tickets as objects
  *
@@ -14,7 +14,7 @@ public class Ticket
     // this is in pence.
     private int cost;
     
-    private String date;
+    private Date newDate;
     
     /**  
      * Constructor of the class Ticket
@@ -27,9 +27,14 @@ public class Ticket
     {
         this.cost = cost;
         this.destination = destination; 
+        this.newDate = newDate; 
     
     }
 
+    /**
+     * This method is to set the cost of the ticket according to the destination 
+     * 
+     */
     public void setcost( int cost) 
     {
         this.cost = cost; 
