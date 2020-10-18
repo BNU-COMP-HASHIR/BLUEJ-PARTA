@@ -27,7 +27,7 @@ public class Ticket
     {
         this.cost = cost;
         this.destination = destination; 
-        this.datePurchased= datePurchased; 
+        datePurchased= new Date(); 
     
     }
 
