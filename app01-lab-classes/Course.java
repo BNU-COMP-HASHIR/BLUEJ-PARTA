@@ -10,7 +10,7 @@ public class Course
     private String title;
     private String codeNumber;
     
-    /**
+    /** Constructor for the objects in Course class.
      * 
      */
     public Course(String title, String codeNumber)
