@@ -40,5 +40,14 @@ public class Ticket
         this.cost = cost; 
        
     }
+    
+    /**
+     * Price accessor method to show us the cost 
+     */
+    
+        public int getCost(int cost)
+    {
+        return cost;
+    }
 }
 
