@@ -42,12 +42,20 @@ public class Ticket
     }
     
     /**
-     * Price accessor method to show us the cost 
+     * Cost accessor method to show us the cost 
      */
     
         public int getCost(int cost)
     {
         return cost;
+    }
+    
+    /** 
+     * Destination accessor method to show us the destination
+     */
+    public String getDestination(String destination) 
+    {
+        return destination; 
     }
 }
 
