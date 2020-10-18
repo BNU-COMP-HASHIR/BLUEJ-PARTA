@@ -14,7 +14,7 @@ public class Ticket
     // this is in pence.
     private int cost;
     
-    private Date newDate;
+    private Date datePurchased;
     
     /**  
      * Constructor of the class Ticket
@@ -27,7 +27,7 @@ public class Ticket
     {
         this.cost = cost;
         this.destination = destination; 
-        this.newDate = newDate; 
+        this.datePurchased= datePurchased; 
     
     }
 
