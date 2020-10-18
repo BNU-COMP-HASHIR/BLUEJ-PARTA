@@ -121,4 +121,20 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    /**
+     * Function for printing all the tickets in the ticket machine.
+     * 
+     */
+    public void printAllTickets()
+    {
+        System.out.println();
+        System.out.println("The Blue J Line");
+        System.out.println();
+        ticketToAylesbury.print();
+        System.out.println();
+        ticketToHighWycombe.print();
+        System.out.println();
+        ticketToAmersham.print();
+    }
 }
