@@ -19,8 +19,9 @@ public class Ticket
     /**  
      * Constructor of the class Ticket
      * 
+     * Add in the destination
      * Add in the fare cost 
-     * Add in the destination 
+     *  
      * 
      */
     public Ticket(String destination, int cost)
@@ -64,7 +65,7 @@ public class Ticket
     public void print() 
     {
         System.out.println("Final destination: " + destination);
-        System.out.println("Ticket Price: " + cost);
+        System.out.println("Ticket Price: " + cost + " Pence");
         System.out.println("Date Purchased: " + datePurchased);
         
     }
