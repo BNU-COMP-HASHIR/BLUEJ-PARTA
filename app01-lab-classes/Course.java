@@ -9,23 +9,31 @@ public class Course
  {
     private String title;
     private String codeNumber;
+    
+    /**
+     * 
+     */
     public Course(String title, String codeNumber)
     {
         this.title = title;
         this.codeNumber = codeNumber;
     }
+    
     public String getTitle() 
     {
         return title;
     }
+    
     public void setTitle(String title) 
     {
         this.title = title;
     }
+    
     public String getCodeNumber() 
     {
         return codeNumber;
     }
+    
     public void setCodeNumber(String codeNumber) 
     {
         this.codeNumber = codeNumber;
