@@ -138,23 +138,40 @@ public class TicketMachine
         ticketToAmersham.print();
     }
     
+    /**
+     * method to add 10p into the ticket machine.
+     * Also prints the current balance.
+     */
     public void insert10Pence()
     {
         balance = balance + 100;
         System.out.println("Current Balance is = " + balance + " Pence");
     }
     
+    /**
+     * method to add 20p into the Ticket Machine.
+     * Also prints the current balance.
+     */
     public void insert20Pence()
     {
         balance = balance + 200;
         System.out.println("Current Balance is = " + balance + " Pence");
     }
     
+    /**
+     * Method to add £1 into the ticket machine.
+     * Also prints the current balance.
+     */
     public void insert1Pound()
     {
         balance = balance + 1000;
-        System.out.println("Current Balance is = " + balance + " Pence");    }
+        System.out.println("Current Balance is = " + balance + " Pence");    
+    }
     
+    /**
+     * method to add £2 into the ticket machine.
+     * Also prints the current balance.
+     */
     public void insert2Pounds()
     {
         balance = balance + 2000;
