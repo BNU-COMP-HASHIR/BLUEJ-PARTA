@@ -137,4 +137,27 @@ public class TicketMachine
         System.out.println();
         ticketToAmersham.print();
     }
+    
+    public void insert10Pence()
+    {
+        balance = balance + 100;
+        System.out.println("Current Balance is = " + balance + " Pence");
+    }
+    
+    public void insert20Pence()
+    {
+        balance = balance + 200;
+        System.out.println("Current Balance is = " + balance + " Pence");
+    }
+    
+    public void insert1Pound()
+    {
+        balance = balance + 1000;
+        System.out.println("Current Balance is = " + balance + " Pence");    }
+    
+    public void insert2Pounds()
+    {
+        balance = balance + 2000;
+        System.out.println("Current Balance is = " + balance + " Pence");
+    }
 }
