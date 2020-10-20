@@ -20,11 +20,13 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     // The Aylesbury ticket. 
-    public Ticket ticketToAylesbury; 
+    private Ticket ticketToAylesbury; 
     // The High Wycombe ticket.
-    public Ticket ticketToHighWycombe; 
+    private Ticket ticketToHighWycombe; 
     // The Amersham ticket.
-    public Ticket ticketToAmersham; 
+    private Ticket ticketToAmersham; 
+    
+    private Ticket selectedTicket;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -139,10 +141,13 @@ public class TicketMachine
         System.out.println();
         System.out.println("The Blue J Line");
         System.out.println();
+        
         ticketToAylesbury.print();
         System.out.println();
+        
         ticketToHighWycombe.print();
         System.out.println();
+        
         ticketToAmersham.print();
         System.out.println();
     }
@@ -190,9 +195,7 @@ public class TicketMachine
     public void insert2Pounds()
     {
         balance = balance + 200;
-        System.out.println("The amount inserted is £2");
-        System.out.println("Current Balance is = " + balance + " Pence");
-        System.out.println();
+        printBalance(200);
     }
  
     /**Print a ticket to HighWycombe if enough money has been inserted, and
@@ -266,6 +269,15 @@ public class TicketMachine
             System.out.println();
                     
         }
+        
+       
     }
+    
+    public void printBalance(int amount)
+        {
+            System.out.println("The amount inserted is " + amount);
+            System.out.println("Current Balance is = " + balance + " Pence");
+            System.out.println();
+        }
     
 }
