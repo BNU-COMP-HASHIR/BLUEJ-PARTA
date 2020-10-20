@@ -11,9 +11,9 @@ public class Ticket
 
     private String destination; 
     
-    // this is in pence.
-    private int cost;
+    public int cost;
     
+    // this is in pence.    
     private Date datePurchased;
     
     /**  
@@ -64,6 +64,7 @@ public class Ticket
      */
     public void print() 
     {
+        System.out.println("THE BLUE J LINE");
         System.out.println("Final destination: " + destination);
         System.out.println("Ticket Price: " + cost + " Pence");
         System.out.println("Date Purchased: " + datePurchased);
