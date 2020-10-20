@@ -95,6 +95,7 @@ public class TicketMachine
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket to Aylesbury");
             System.out.println("# " + ticketToAylesbury.getCost() + " pence.");
+            System.out.println("Date Purchased: " + ticketToAylesbury.getDate());
             System.out.println("##################");
             System.out.println();
 
@@ -199,6 +200,7 @@ public class TicketMachine
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket to High Wycombe");
             System.out.println("# " + ticketToHighWycombe.getCost() + " pence.");
+            System.out.println("Date Purchased: " + ticketToHighWycombe.getDate());
             System.out.println("##################");
             System.out.println();
 
@@ -232,6 +234,7 @@ public class TicketMachine
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket to Amersham");
             System.out.println("# " + ticketToAmersham.getCost() + " pence.");
+            System.out.println("Date Purchased: " + ticketToAmersham.getDate());
             System.out.println("##################");
             System.out.println();
 

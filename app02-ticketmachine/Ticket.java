@@ -70,6 +70,14 @@ public class Ticket
         System.out.println("Date Purchased: " + datePurchased);
         
     }
+    
+    /**
+     * Date accessor method.
+     */
+    public Date getDate()
+    {
+        return datePurchased; 
+    }
    
 }
 
