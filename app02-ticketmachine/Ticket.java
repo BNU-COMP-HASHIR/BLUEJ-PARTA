@@ -67,7 +67,7 @@ public class Ticket
         System.out.println("THE BLUE J LINE");
         System.out.println("Final destination: " + destination);
         System.out.println("Ticket Price: " + cost + " Pence");
-        System.out.println("Date Purchased: " + datePurchased);
+        System.out.println("Date: " + datePurchased);
         
     }
     

@@ -18,5 +18,10 @@ AUTHORS: Hashir Iqbal
 
 USER INSTRUCTIONS: Create a ticket machine from the ticket class. To make things easier and save time, you can call the method to create all the three tickets the machine has to offer. 
 You can then insert specific coins through methods in the machine and select the required buy ticket function to get the ticket you want. 
+PRICES ARE AS FOLLOWS:
+
+Aylesbury: £2.20 (220p)
+High Wycombe:£3.30 (330p)
+Amersham: £3.00 (300p)
 
 

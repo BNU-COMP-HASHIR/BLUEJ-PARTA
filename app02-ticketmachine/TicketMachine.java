@@ -16,7 +16,7 @@ public class TicketMachine
     // The price of a ticket from this machine.
     public int cost;
     // The amount of money entered by a customer so far.
-    private int balance;
+    public int balance;
     // The total amount of money collected by this machine.
     private int total;
     // The Aylesbury ticket. 
@@ -105,11 +105,14 @@ public class TicketMachine
             balance = balance - ticketToAylesbury.getCost();
             // Returning the change. 
             System.out.println(" The amount to refund is: " + refundBalance());
+            System.out.println("The amount has been refunded.");
+            System.out.println();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-            (ticketToAylesbury.getCost() - balance) + " more cents.");
+            (ticketToAylesbury.getCost() - balance) + " more pence.");
+            System.out.println();
                     
         }
     }
@@ -124,6 +127,7 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+         
     }
     
     /**
@@ -140,6 +144,7 @@ public class TicketMachine
         ticketToHighWycombe.print();
         System.out.println();
         ticketToAmersham.print();
+        System.out.println();
     }
     
     /**
@@ -151,6 +156,7 @@ public class TicketMachine
         balance = balance + 10;
         System.out.println("The amount inserted is 10p");
         System.out.println("Current Balance is = " + balance + " Pence");
+        System.out.println();
     }
     
     /**
@@ -162,6 +168,7 @@ public class TicketMachine
         balance = balance + 20;
         System.out.println("The amount inserted is 20p");
         System.out.println("Current Balance is = " + balance + " Pence");
+        System.out.println();
     }
     
     /**
@@ -172,7 +179,8 @@ public class TicketMachine
     {
         balance = balance + 100;
         System.out.println("The amount inserted is £1");
-        System.out.println("Current Balance is = " + balance + " Pence");    
+        System.out.println("Current Balance is = " + balance + " Pence"); 
+        System.out.println();
     }
     
     /**
@@ -184,6 +192,7 @@ public class TicketMachine
         balance = balance + 200;
         System.out.println("The amount inserted is £2");
         System.out.println("Current Balance is = " + balance + " Pence");
+        System.out.println();
     }
  
     /**Print a ticket to HighWycombe if enough money has been inserted, and
@@ -210,11 +219,14 @@ public class TicketMachine
             balance = balance - ticketToHighWycombe.getCost();
             // Returning the change. 
             System.out.println(" The amount to refund is: " + refundBalance());
+            System.out.println("The amount has been refunded.");
+            System.out.println();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-            (ticketToHighWycombe.getCost() - balance) + " more cents.");
+            (ticketToHighWycombe.getCost() - balance) + " more Pence.");
+            System.out.println();
            
         }
     }
@@ -233,7 +245,7 @@ public class TicketMachine
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket to Amersham");
-            System.out.println("# " + ticketToAmersham.getCost() + " pence.");
+            System.out.println("# " + ticketToAmersham.getCost() + " Pence.");
             System.out.println("Date Purchased: " + ticketToAmersham.getDate());
             System.out.println("##################");
             System.out.println();
@@ -244,11 +256,14 @@ public class TicketMachine
             balance = balance - ticketToAmersham.getCost();
             // Returning the change. 
             System.out.println(" The amount to refund is: " + refundBalance());
+            System.out.println("The amount has been refunded.");
+            System.out.println();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-            (ticketToAmersham.getCost() - balance) + " more cents.");
+            (ticketToAmersham.getCost() - balance) + " more Pence.");
+            System.out.println();
                     
         }
     }
