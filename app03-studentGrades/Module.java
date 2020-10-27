@@ -56,9 +56,10 @@ public class Module
     /**
      * Method to print out the title and code of a particular module.
      */
-    public void print()
+    public void printDetails()
     {
-         System.out.println("Title: " + title + "Code: " + codeNum);
+        System.out.println("Following are the modules' details:");
+        System.out.println("Title: " + title + " Code: " + codeNum);
     }
 
 }   

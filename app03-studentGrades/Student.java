@@ -32,7 +32,7 @@ public class Student
     /**
      * Method to enroll the student to course.
     */
-    public void setCourse(Course course)
+    public void enrollStudent(Course course)
     {
         this.course = course; 
     }
@@ -96,5 +96,13 @@ public class Student
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
         course.print();
+    }
+    
+    /**
+     * Method to enroll students.
+     */
+    public void enrollStudent()
+    {
+        
     }
 }
