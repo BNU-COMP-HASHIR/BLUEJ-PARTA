@@ -1,21 +1,24 @@
 import java.util.*;
 
 /**
- * The Student class represents a student in a student administration system.
- * It holds the student details relevant in our context.
+ * This application is used to calculate final grades for students after they 
+ * have completed all the required modules in their class.
+ * Each module is worth 15 credits
  * 
  * @author Michael Kölling and David Barnes
- * @version 2016.02.29
+ * @modified by Hashir Iqbal 
+ * @version 27/10/20 
  */
 public class Student
 {
     // the student's full name
     private String name;
-    // the student ID
+    // the student ID 
     private String id;
     // the amount of credits for study taken so far
     private int credits;
     
+    private Course course; 
     /**
      * Create a new student with a given name and ID number.
      */
@@ -25,7 +28,16 @@ public class Student
         id = studentID;
         credits = 0;
     }
-
+    
+    /**
+     * Method to enroll the student to course.
+    */
+    public void setCourse(Course course)
+    {
+        this.course = course; 
+    }
+    
+    
     /**
      * Return the full name of this student.
      */
@@ -83,5 +95,6 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
     }
 }
