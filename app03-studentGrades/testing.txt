@@ -1,0 +1,43 @@
+Student student1 = new Student("Bob", "1");
+Course course1 = new Course("BSC Computing", "1010");
+student1.enrollStudent(course1);
+course1.createModules();
+course1.setModuleMarks(50, 1);
+course1.setModuleMarks(68, 2);
+course1.setModuleMarks(80, 3);
+course1.setModuleMarks(44, 4);
+course1.printModuleDetails();
+Following are the modules' details:
+Title: Graphic Design Code: CO1
+Following are the modules' details:
+Title: Web Design Code: CO2
+Following are the modules' details:
+Title: Programming Code: CO3
+Following are the modules' details:
+Title: Networking Code: CO4
+course1.print();
+Title='BSC Computing, Code Number='1010
+course1.printModuleDetails();
+Following are the modules' details:
+Title: Graphic Design Code: CO1
+Following are the modules' details:
+Title: Web Design Code: CO2
+Following are the modules' details:
+Title: Programming Code: CO3
+Following are the modules' details:
+Title: Networking Code: CO4
+course1.calculateFinalMark();
+The Final mark is 60
+course1.calculateFinalGrade();
+The Final grade is: B
+course1.printAllModuleMarks();
+Marks of module 1 are: 50
+Marks of module 2 are: 68
+Marks of module 3 are: 80
+Marks of module 4 are: 44
+student1.printFinalResult();
+The Final Grade is: B
+Marks of module 1 are: 50
+Marks of module 2 are: 68
+Marks of module 3 are: 80
+Marks of module 4 are: 44

@@ -99,10 +99,12 @@ public class Student
     }
     
     /**
-     * Method to enroll students.
+     * Method to print the final grade and marks of the modules.
      */
-    public void enrollStudent()
+    public void printFinalResult()
     {
+        System.out.println("The Final Grade is: " + course.getGrade() );
+        course.printAllModuleMarks();
         
     }
 }

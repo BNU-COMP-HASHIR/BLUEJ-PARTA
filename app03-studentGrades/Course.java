@@ -176,4 +176,25 @@ public class Course
         module3.printDetails();
         module4.printDetails();
     }
+    
+    /**
+     * Method to get the final grade.
+     */
+    public Grades getGrade()
+    {
+        return finalGrade;
+    }
+    
+    /**
+     * method to print all module marks.
+     */
+    public void printAllModuleMarks()
+    {
+        System.out.println("Marks of module 1 are: " + module1.getMark());
+        System.out.println("Marks of module 2 are: " + module2.getMark());
+        System.out.println("Marks of module 3 are: " + module3.getMark());
+        System.out.println("Marks of module 4 are: " + module4.getMark());
+       
+    }
+    
 }
