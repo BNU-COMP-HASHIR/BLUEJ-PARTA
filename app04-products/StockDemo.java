@@ -4,7 +4,8 @@ import java.util.Random;
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
- * 
+ * The demonstration then simulates a delivery of products with random numbers used and moves on
+ * to sell thpse products with the same technique of random numbers.
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
  */
