@@ -1,0 +1,106 @@
+StockManager Manager = new StockManager();
+StockManager manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(manager);
+stockDem1.runDemo();
+
+=================
+Hash's Stock List
+=================
+
+101: Apple iPhone 12 stock level: 0
+102: Apple iPhone 12 Mini stock level: 0
+103: Apple iPhone 12 Pro stock level: 0
+104: Apple iPhone 12 Pro Max stock level: 0
+105: Apple iPhone 11 stock level: 0
+106: Apple iPhone 11 Pro stock level: 0
+107: Apple iPhone 11 Pro Max stock level: 0
+108: Apple iPhone Xs stock level: 0
+109: Apple iPhone Xs Max stock level: 0
+110: Apple iPhone Xr stock level: 0
+No. of products in stock = 10
+
+Delivery of Products
+
+Attempt to restock Apple iPhone 12 Pro Max with a positive amount: 0
+Attempt to restock Apple iPhone Xr with a positive amount: 0
+
+=================
+Hash's Stock List
+=================
+
+101: Apple iPhone 12 stock level: 8
+102: Apple iPhone 12 Mini stock level: 6
+103: Apple iPhone 12 Pro stock level: 1
+104: Apple iPhone 12 Pro Max stock level: 0
+105: Apple iPhone 11 stock level: 6
+106: Apple iPhone 11 Pro stock level: 6
+107: Apple iPhone 11 Pro Max stock level: 8
+108: Apple iPhone Xs stock level: 3
+109: Apple iPhone Xs Max stock level: 4
+110: Apple iPhone Xr stock level: 0
+
+Sale of Products
+
+Only 8 Apple iPhone 12 in stock, but there were 9 ordered
+Selling 6 of stock item Apple iPhone 12 Mini
+Only 1 Apple iPhone 12 Pro in stock, but there were 5 ordered
+Only 0 Apple iPhone 12 Pro Max in stock, but there were 2 ordered
+Selling 4 of stock item Apple iPhone 11
+Only 6 Apple iPhone 11 Pro in stock, but there were 7 ordered
+Selling 8 of stock item Apple iPhone 11 Pro Max
+Only 3 Apple iPhone Xs in stock, but there were 6 ordered
+Only 4 Apple iPhone Xs Max in stock, but there were 5 ordered
+Only 0 Apple iPhone Xr in stock, but there were 5 ordered
+
+=================
+Hash's Stock List
+=================
+
+101: Apple iPhone 12 stock level: 8
+102: Apple iPhone 12 Mini stock level: 0
+103: Apple iPhone 12 Pro stock level: 1
+104: Apple iPhone 12 Pro Max stock level: 0
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 11 Pro stock level: 6
+107: Apple iPhone 11 Pro Max stock level: 0
+108: Apple iPhone Xs stock level: 3
+109: Apple iPhone Xs Max stock level: 4
+110: Apple iPhone Xr stock level: 0
+manager.removeProduct(110);
+manager.renameProduct(101, "Apple iPhone 4");
+manager.printAllProducts();
+
+=================
+Hash's Stock List
+=================
+
+101: Apple iPhone 4 stock level: 8
+102: Apple iPhone 12 Mini stock level: 0
+103: Apple iPhone 12 Pro stock level: 1
+104: Apple iPhone 12 Pro Max stock level: 0
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 11 Pro stock level: 6
+107: Apple iPhone 11 Pro Max stock level: 0
+108: Apple iPhone Xs stock level: 3
+109: Apple iPhone Xs Max stock level: 4
+manager.printByProductSubstring("11");
+
+=================
+Hash's Stock List
+=================
+
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 11 Pro stock level: 6
+107: Apple iPhone 11 Pro Max stock level: 0
+manager.printLowStock();
+
+=================
+Hash's Stock List
+=================
+
+102: Apple iPhone 12 Mini stock level: 0
+103: Apple iPhone 12 Pro stock level: 1
+104: Apple iPhone 12 Pro Max stock level: 0
+105: Apple iPhone 11 stock level: 2
+107: Apple iPhone 11 Pro Max stock level: 0
+108: Apple iPhone Xs stock level: 3

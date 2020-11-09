@@ -92,6 +92,7 @@ public class StockManager
             if(product.getID() == id)
             {
                 stock.remove(product);
+                break;
             }
        }
     }
@@ -146,6 +147,38 @@ public class StockManager
         }
     }
     
+    /**
+     * This method prints a list of products based on part of product name.
+     */
+    public void printByProductSubstring(String subString)
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            if(product.getName().contains(subString))
+            { 
+                System.out.println(product);
+            }
+        }
+    }
+    
+    /**
+     * This method prints the list of stock which are getting low i.e less than or equal to 3.
+     */
+    public void printLowStock()
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 3)
+            { 
+                System.out.println(product);
+            }
+        }
+    }
+   
     /**
      * This method prints out a heading for the stocklist.
      */
