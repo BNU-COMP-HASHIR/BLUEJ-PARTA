@@ -14,6 +14,8 @@ public class StockDemo
     private StockManager manager;
     
     private Random generator = new Random();
+    
+    private int amount = 0;
 
     /**
      * Create a StockManager and populate it with a few
@@ -45,16 +47,10 @@ public class StockDemo
         manager.printAllProducts();
         
         int noProducts = manager.numberProductsInStock();
-        int amount = 0;
+        
         System.out.println("No. of products in stock = " + noProducts);
                
-        for(int id = 101; id <= 110; id++)
-        {
-            amount = generator.nextInt(10);
-            manager.delivery(id, amount);
-        }
-        
-        manager.printAllProducts();
+
     }
     
     private void demoSellProducts()
