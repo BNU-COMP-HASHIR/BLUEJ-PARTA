@@ -29,6 +29,7 @@ public class StockManager
         stock.add(item);
     }
     
+    
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -64,7 +65,28 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printAllProducts()
     {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
     }
+    
+    /**
+     * This method prints out a heading for the stocklist.
+     */
+    public void printHeading()
+    {
+        System.out.println();
+        System.out.println("=================");
+        System.out.println("Hash's Stock List");
+        System.out.println("=================");
+        System.out.println();
+        
+    }
+    
+
 }

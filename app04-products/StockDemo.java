@@ -15,11 +15,12 @@ public class StockDemo
      * Create a StockManager and populate it with a few
      * sample products.
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
+        this.manager = manager;
+        
         manager.addProduct(new Product(101,"Apple iPhone 12"));
-        manager.addProduct(new Product(102,"Apple iPhone 12 mini"));
+        manager.addProduct(new Product(102,"Apple iPhone 12 Mini"));
         manager.addProduct(new Product(103,"Apple iPhone 12 Pro"));
         manager.addProduct(new Product(104,"Apple iPhone 12 Pro Max"));
         manager.addProduct(new Product(105,"Apple iPhone 11"));
@@ -38,10 +39,10 @@ public class StockDemo
     public void demo()
     {
         // Show details of all of the products.
-        manager.printProductDetails();
+        manager.printAllProducts();
         // Take delivery of 5 items of one of the products.
         manager.delivery(132, 5);
-        manager.printProductDetails();
+        manager.printAllProducts();
     }
     
     /**
