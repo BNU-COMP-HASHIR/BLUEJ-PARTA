@@ -59,7 +59,7 @@ public class StockDemo
      */
     private void demoSellProducts()
     {
-        System.out.println("Sale of Products");
+        System.out.println("\nSale of Products\n");
         for(int id = 101; id <= 110; id++)
         {
             amount = generator.nextInt(10);
@@ -73,8 +73,8 @@ public class StockDemo
      * This method simulates the delivery of products.
      */
     private void demoDeliverProducts()
-    {
-        System.out.println("Delivery of Products");
+   {
+        System.out.println("\nDelivery of Products\n");
         for(int id = 101; id <= 110; id++)
         {
             amount = generator.nextInt(10);
@@ -82,6 +82,6 @@ public class StockDemo
         }
         
         manager.printAllProducts();        
-    }
+   }
  
 }

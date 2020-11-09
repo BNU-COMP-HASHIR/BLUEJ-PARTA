@@ -78,10 +78,6 @@ public class StockManager
             { 
                 return product;
             }
-            else
-            {
-                System.out.println("Cannot find product id " + id + "\n");
-            }
         }
         return null;
     }
