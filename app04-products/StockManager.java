@@ -29,6 +29,19 @@ public class StockManager
         stock.add(item);
     }
     
+    /**
+     * This method sells a specificed quantity of a product.
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product!= null)
+        {
+            product.sell(quantity);
+        }
+        
+    }
     
     /**
      * Receive a delivery of a particular product.
@@ -47,6 +60,13 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            { 
+                return product;
+            }
+        }
         return null;
     }
     

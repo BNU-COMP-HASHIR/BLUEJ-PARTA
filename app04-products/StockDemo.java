@@ -72,7 +72,7 @@ public class StockDemo
         if(product != null) 
         {
             showDetails(id);
-            product.sellOne();
+            product.sell(5);
             showDetails(id);
         }
     }
