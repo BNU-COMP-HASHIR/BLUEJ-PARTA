@@ -1,11 +1,11 @@
-import java.util.ArrayList;
+  import java.util.ArrayList;
 
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Hashir Iqbal) 
+ * @version (9/11/20)
  */
 public class StockManager
 {

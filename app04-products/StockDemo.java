@@ -18,9 +18,16 @@ public class StockDemo
     public StockDemo()
     {
         manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        manager.addProduct(new Product(101,"Apple iPhone 12"));
+        manager.addProduct(new Product(102,"Apple iPhone 12 mini"));
+        manager.addProduct(new Product(103,"Apple iPhone 12 Pro"));
+        manager.addProduct(new Product(104,"Apple iPhone 12 Pro Max"));
+        manager.addProduct(new Product(105,"Apple iPhone 11"));
+        manager.addProduct(new Product(106,"Apple iPhone 11 Pro"));
+        manager.addProduct(new Product(107,"Apple iPhone 11 Pro Max"));
+        manager.addProduct(new Product(108,"Apple iPhone Xs"));
+        manager.addProduct(new Product(109,"Apple iPhone Xs Max"));
+        manager.addProduct(new Product(110,"Apple iPhone Xr"));
     }
     
     /**

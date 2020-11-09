@@ -2,7 +2,7 @@
  * Model some details of a product sold by a company.
  * 
  * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @version (Hashir Iqbal 9/11/20)
  */
 public class Product
 {
@@ -40,6 +40,14 @@ public class Product
     public String getName()
     {
         return name;
+    }
+    
+    /**
+     * Set the product's name.
+     */
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
     /**
