@@ -81,7 +81,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a negative or zero amount: " + amount);
+                               " with a positive amount: " + amount);
         }
     }
 
@@ -93,15 +93,18 @@ public class Product
     {
         if(saleQuantity > quantity) 
         {
-            System.out.println("Insufficient stock = " + quantity + 
-                  " selling all stock of " + name);
+            System.out.println("Only " + quantity +" " + name +
+                  " in stock, but there were " + 
+                  saleQuantity + " ordered");
                   
             quantity -= 0;
         }
         else
         {
             System.out.println(
-                "Attempt to sell an out of stock item: " + name);
+                "Selling " + saleQuantity + " of stock item " + name);
+                
+            quantity -= saleQuantity;
         }
     }
 }
