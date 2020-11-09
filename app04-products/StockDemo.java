@@ -61,10 +61,10 @@ public class StockDemo
     {
         System.out.println("\nSale of Products\n");
         for(int id = 101; id <= 110; id++)
-        {
+       {
             amount = generator.nextInt(10);
             manager.sellProduct(id, amount);
-        }
+       }
         
         manager.printAllProducts();         
     }
