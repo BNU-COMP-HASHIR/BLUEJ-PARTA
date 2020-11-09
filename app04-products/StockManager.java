@@ -50,8 +50,20 @@ public class StockManager
      * @param amount The amount to increase the quantity by.
      */
     public void delivery(int id, int amount)
-    {
+    { 
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            product.deliver(amount); 
+        }
+        else
+        {
+            System.out.println("\nCannot find product id " + id + "\n");
+        }
+   
     }
+    
     
     /**
      * Try to find a product in the stock with the given id.
@@ -66,8 +78,27 @@ public class StockManager
             { 
                 return product;
             }
+            else
+            {
+                System.out.println("Cannot find product id " + id + "\n");
+            }
         }
         return null;
+    }
+    
+    /**
+     * Show details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
+     */
+    public void printDetails(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
     }
     
     /**
@@ -77,9 +108,9 @@ public class StockManager
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public int numberInStock(int id)
+    public int numberProductsInStock()
     {
-        return 0;
+        return stock.size();
     }
 
     /**
@@ -93,6 +124,7 @@ public class StockManager
         {
             System.out.println(product);
         }
+        
     }
     
     /**
