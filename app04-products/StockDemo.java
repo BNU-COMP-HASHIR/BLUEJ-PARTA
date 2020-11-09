@@ -39,8 +39,7 @@ public class StockDemo
     
     /**
      * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * might be used. It recieves a delivery first and then that stock is sold. 
      */
     public void runDemo()
     {
@@ -49,23 +48,32 @@ public class StockDemo
         int noProducts = manager.numberProductsInStock();
         
         System.out.println("No. of products in stock = " + noProducts);
-               
-
+        
+        demoDeliverProducts();
+        demoSellProducts();
     }
     
+    /**
+     * This method simulates the sale of products.
+     */
     private void demoSellProducts()
     {
+        System.out.println("Sale of Products");
         for(int id = 101; id <= 110; id++)
         {
             amount = generator.nextInt(10);
-            manager.delivery(id, amount);
+            manager.sellProduct(id, amount);
         }
         
         manager.printAllProducts();         
     }
     
-    private void demoDelivery()
+    /**
+     * This method simulates the delivery of products.
+     */
+    private void demoDeliverProducts()
     {
+        System.out.println("Delivery of Products");
         for(int id = 101; id <= 110; id++)
         {
             amount = generator.nextInt(10);

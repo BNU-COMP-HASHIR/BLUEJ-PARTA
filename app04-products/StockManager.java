@@ -102,11 +102,7 @@ public class StockManager
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * This method shows the size of the inventory list.
      */
     public int numberProductsInStock()
     {
@@ -124,7 +120,6 @@ public class StockManager
         {
             System.out.println(product);
         }
-        
     }
     
     /**
