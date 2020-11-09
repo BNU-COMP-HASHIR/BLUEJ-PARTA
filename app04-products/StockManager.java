@@ -83,6 +83,34 @@ public class StockManager
     }
     
     /**
+     * This method removes a product from stocklist via its ID.
+     */
+    public void removeProduct(int id)
+    {
+        for(Product product : stock)
+       {
+            if(product.getID() == id)
+            {
+                stock.remove(product);
+            }
+       }
+    }
+    /**
+     * This method changes the product name.
+     */
+    public void renameProduct(int id, String name)
+    {
+        for(Product product : stock)
+       {
+            if(product.getID() == id)
+            { 
+                product.setName(name);
+            }
+       }
+    }
+    
+    
+    /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
