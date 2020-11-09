@@ -81,7 +81,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                               " with a negative or zero amount: " + amount);
         }
     }
 
@@ -91,11 +91,14 @@ public class Product
      */
     public void sell(int saleQuantity)
     {
-        if(quantity >= saleQuantity) 
+        if(saleQuantity > quantity) 
         {
-            quantity -= saleQuantity;
+            System.out.println("Insufficient stock = " + quantity + 
+                  " selling all stock of " + name);
+                  
+            quantity -= 0;
         }
-        else 
+        else
         {
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
