@@ -49,7 +49,10 @@ public class StockApp
             }
         }
     }
-
+    
+    /**
+     * This method executes whatever command user chooses to run.
+     */
     private void executeMenuChoice(String choice)
     {
         if(choice.equals("ADD"))
@@ -67,18 +70,18 @@ public class StockApp
     }
 
     /**
-     * 
+     * This method removes a product.
      */
-    public void addProduct()
+    public void removeProduct()
     {
         
 
     }
     
     /**
-     * 
+     * This method adds a product.
      */
-    public void removeProduct()
+    public void addProduct()
     {
         System.out.println("\nAdding a new product");
         
@@ -88,11 +91,17 @@ public class StockApp
         System.out.println("Enter a product ID");
         String value = input.getString();
         
+        int id = Integer.parseInt(value);
+        Product product = new Product(id, name);
+        
+        System.out.println("Product added");
+        
+        manager.addProduct(product);
 
     }
     
     /**
-     * 
+     * This method prints all products.
      */
     public void printAllProducts()
     {
@@ -118,6 +127,7 @@ public class StockApp
      */
     private void printHeading()
     {
+        System.out.println();
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
         System.out.println("    App05: by Hashir Iqbal");
