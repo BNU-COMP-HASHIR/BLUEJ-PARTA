@@ -11,11 +11,11 @@ public class StockApp
 {
     // Use to get user input
     private InputReader input;
-    
+
     private StockManager manager;
-    
+
     private StockDemo demo;
-   
+
     /**
      * Constructor for objects of class StockApp
      */
@@ -49,7 +49,7 @@ public class StockApp
             }
         }
     }
-    
+
     /**
      * This method executes whatever command user chooses to run.
      */
@@ -74,32 +74,37 @@ public class StockApp
      */
     public void removeProduct()
     {
-        
 
     }
-    
     /**
      * This method adds a product.
      */
     public void addProduct()
     {
         System.out.println("\nAdding a new product");
-        
+
         System.out.println("Enter the product name");
         String name = input.getString();
-        
+
         System.out.println("Enter a product ID");
         String value = input.getString();
-        
+
         int id = Integer.parseInt(value);
-        Product product = new Product(id, name);
-        
-        System.out.println("Product added");
-        
-        manager.addProduct(product);
+
+        if(manager.isDuplicate(id))
+        {
+            System.out.println("Duplicate id!!!!");
+        }
+        else
+        {
+            Product product = new Product(id, name);
+
+            System.out.println("New product added" + product + "\n");
+
+            manager.addProduct(product);            
+        }
 
     }
-    
     /**
      * This method prints all products.
      */

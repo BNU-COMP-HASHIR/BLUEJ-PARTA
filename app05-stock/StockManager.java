@@ -192,5 +192,20 @@ public class StockManager
         
     }
     
+    /**
+     * Checks if the product id is already in use.
+     */
+    public boolean isDuplicate( int id)
+    {
+        Product product = findProduct(id);
+        if(product == null)
+        {
+            return false;
+        }
+        else 
+        {
+            return true;
+        }
+    }
 
 }
