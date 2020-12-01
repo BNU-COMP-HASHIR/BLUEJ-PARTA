@@ -12,6 +12,8 @@ public class Product
     private String name;
     // The quantity of this product in stock.
     private int quantity;
+    
+    private int minStockLevel;
 
     /**
      * Constructor for objects of class Product.
