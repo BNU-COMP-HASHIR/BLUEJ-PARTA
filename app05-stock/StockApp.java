@@ -74,8 +74,17 @@ public class StockApp
      */
     public void removeProduct()
     {
+        System.out.println("\nRemoving a product");
+        System.out.println("Enter the product id to remove");
+
+        String value = input.getString();
+
+        int id = Integer.parseInt(value);
+
+        manager.removeProduct(id);
 
     }
+
     /**
      * This method adds a product.
      */
@@ -85,26 +94,30 @@ public class StockApp
 
         System.out.println("Enter the product name");
         String name = input.getString();
+        while(name.equals(""))
+        {
+            System.out.println("\nName is null \nEnter valid name");
+            name = input.getString();
+        }
 
         System.out.println("Enter a product ID");
         String value = input.getString();
 
         int id = Integer.parseInt(value);
 
-        if(manager.isDuplicate(id))
+        while(manager.isDuplicate(id))
         {
             System.out.println("Duplicate id!!!!");
-        }
-        else
-        {
-            Product product = new Product(id, name);
-
-            System.out.println("New product added" + product + "\n");
-
-            manager.addProduct(product);            
+            System.out.println("Enter valid id");
+            value = input.getString();
+            id = Integer.parseInt(value);
         }
 
+        Product product = new Product(id, name);
+        System.out.println("New product added" + product + "\n");
+        manager.addProduct(product);     
     }
+
     /**
      * This method prints all products.
      */
