@@ -12,12 +12,15 @@ public class StockManager
     // A list of the products.
     private ArrayList<Product> stock;
 
+    private InputReader input;
+
     /**
      * Initialise the stock manager.
      */
     public StockManager()
     {
         stock = new ArrayList<>();
+        input = new InputReader();
     }
 
     /**
@@ -38,14 +41,36 @@ public class StockManager
 
         if(product!= null)
         {
+            while(product.getQuantity() < quantity)
+            {
+                System.out.println("\nQuantity entered is " +
+                    "greater than available stock");
+                System.out.println("Enter within available quantity");
+                String value = input.getString();
+                quantity = Integer.parseInt(value);
+            }
+            
+            while(quantity <= 0)
+            {
+                System.out.println("\nQuantity entered is invalid");
+                System.out.println("Enter a valid quantity");
+                String value = input.getString();
+                quantity = Integer.parseInt(value);
+            }
             product.sell(quantity);
+           
+        }
+        else 
+        {
+            System.out.println("Product does not exist");
         }
 
     }
 
     /**
      * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
+     * Increase the quantity of the product by the given amount which should be 
+     * more than zero.
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
@@ -55,7 +80,18 @@ public class StockManager
 
         if(product != null) 
         {
-            product.deliver(amount); 
+            while(amount <= 0)
+            {
+                System.out.println("\nAmount ordered is less than zero");
+                System.out.println("Enter a positive amount");
+                String value = input.getString();
+                amount = Integer.parseInt(value);
+            }
+
+            product.deliver(amount);
+            System.out.println("\n" + amount + " of " + product.getName() 
+                + " were delivered");
+
         }
         else
         {
@@ -64,7 +100,7 @@ public class StockManager
 
     }
 
-     /**
+    /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
      *         with a matching ID.
@@ -86,30 +122,20 @@ public class StockManager
      */
     public void removeProduct(int id)
     {
-        /*for(Product product : stock)
-        {
-            boolean exist = false; 
-            if(product.getID() == id)
-            {
-                stock.remove(product);
-                break;
-            }
-            else
-            {
-                System.out.println("\nID is invalid");
-            }
-        }*/
-        
         Product product = findProduct(id);
-        if(product == null)
+        while(product == null)
         {
-            System.out.println("\nID does not exist \nEnter a valid ID");
+            System.out.println("\nProduct does not exist \nEnter a valid ID");
+
+            String value = input.getString();
+            id = Integer.parseInt(value);
+            product = findProduct(id);
+
         }
-        else
-        {
-            stock.remove(product);
-            System.out.println(product.getName() + " has been removed");
-        }
+
+        stock.remove(product);
+        System.out.println(product.getName() + " has been removed");
+
     }
 
     /**

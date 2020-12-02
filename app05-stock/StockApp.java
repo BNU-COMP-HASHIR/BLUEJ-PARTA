@@ -67,6 +67,14 @@ public class StockApp
         {
             printAllProducts();
         }
+        else if(choice.equals("DELIVERY"))
+        {
+            deliverProducts();
+        }
+        else if(choice.equals("SELL"))
+        {
+            sellProduct();
+        }
     }
 
     /**
@@ -74,15 +82,32 @@ public class StockApp
      */
     public void removeProduct()
     {
-        System.out.println("\nRemoving a product");
-        System.out.println("Enter the product id to remove");
+       System.out.println("\nRemoving a product");
+       System.out.println("Enter the product id to remove");
 
+       String value = input.getString();
+       
+       int id = Integer.parseInt(value);
+
+       manager.removeProduct(id);
+
+    }
+    
+    /**
+     * This method sells the product.
+     */
+    private void sellProduct()
+    {   
+        System.out.println("Enter a product ID");
+ 
         String value = input.getString();
-
         int id = Integer.parseInt(value);
-
-        manager.removeProduct(id);
-
+        
+        System.out.println("Enter the quantity");
+        value = input.getString();
+        int quantity = Integer.parseInt(value);
+        
+        manager.sellProduct(id, quantity);
     }
 
     /**
@@ -125,6 +150,23 @@ public class StockApp
     {
         manager.printAllProducts();
     }
+    
+    /**
+     * Method for the delivery of products.
+     */
+    public void deliverProducts()
+    {
+        System.out.println("Enter a product ID");
+ 
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+        
+        System.out.println("Enter the quantity");
+        value = input.getString();
+        int amount = Integer.parseInt(value);
+        
+        manager.delivery(id, amount);
+    }
 
     /**
      * Print out a menu of operation choices
@@ -136,7 +178,10 @@ public class StockApp
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    PrintAll:   Print all products");
+        System.out.println("    Delivery:   Deliver the products");
+        System.out.println("    Sell:       Sell the products");
         System.out.println("    Quit:       Quit the program");
+        
         System.out.println();        
     }
 
